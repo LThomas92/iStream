@@ -8,10 +8,6 @@ class StreamCreate extends React.Component {
     this.props.createStream(formValues);
   };
 
-  onSubmit = formValues => {
-    this.props.createStream(formValues);
-  };
-
   render() {
     return (
       <div className="stream-container">

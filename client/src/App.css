@@ -1,0 +1,22 @@
+.logo {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  height: 3.5rem;
+}
+
+.google-btn {
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.stream-container {
+  margin: 0 10rem;
+}
+
+.desc-text {
+  margin: 2rem 5rem;
+}

@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+iStream is an app can watch streams coming from the OBS software. The app is built with React, Redux, JSON Server API and node-media-server npm package. 
 
-## Available Scripts
+Client Side
 
-In the project directory, you can run:
+Holds the React UI and uses Redux for state management for the application. This app also features a Google OAuth authentication which will give you CRUD permissions only if you are logged in. Styling was done with Semantic UI.
 
-### `npm start`
+To start the react development server. Please enter the following command in your terminal window. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm start
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+Back End API
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The backend api data is stored on the JSON Web Server API. In the db.json file. 
+To start the Back End API in the backend folder in a terminal window enter the following command
 
-### `npm run build`
+npm start
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+RTMP Server
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The rtmp server hosts the stream from OBS Studio Software which is a program used for most computer streaming activies. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the rtmp server (node-media-server) in a terminal window npm or yarn start
 
-### `npm run eject`
+If not installed, Install OBS Studio - https://obsproject.com/ Create a streaming scene then a Source for display.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Change settings for stream - File/Settings/Stream
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+URL = rtmp://localhost/live
+Stream key = 1 -- note, the stream key must match the id of the stream in the client, example: http://localhost:3000/streams/1 would match on stream key 1
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The Media Server should be started for this to work.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+All 3 Terminals need to be running for the application to work.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
